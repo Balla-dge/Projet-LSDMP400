@@ -14,7 +14,7 @@ du matériau en résolvant :
 ∇ · (ε ∇φ) = 0
 ```
 
-avec des conditions aux limites de Dirichlet (potentiel imposé sur les électrodes et sur
+avec des conditions aux limites (potentiel imposé sur les électrodes et sur
 la face inférieure du domaine).
 
 ---
