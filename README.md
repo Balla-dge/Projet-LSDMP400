@@ -5,6 +5,12 @@
 Ce notebook implémente une simulation de l'**équation de Laplace** en électrostatique
 dans un domaine 3D, à l'aide de la **méthode des éléments finis (FEM)**.
 
+Le sujet en résumé :
+Il s'agit d'une simulation électrostatique 3D par éléments finis d'un capteur capacitif à électrodes coplanaires. Concrètement :
+Physique — On résout l'équation de Laplace ∇·(ε∇φ) = 0 dans un bloc isolant 3D (1 m × 0.5 m × 0.3 m, εᵣ = 4). Deux électrodes rectangulaires sont posées sur la face supérieure (V₁ = 4 V, V₂ = 2 V) et la face inférieure est à la masse. On cherche la distribution du potentiel φ et du champ E = −∇φ dans tout le volume.
+Méthode — La FEM P1 sur un maillage tétraédrique structuré (~48 000 nœuds, ~261 000 tétraèdres). La matrice de rigidité globale creuse est assemblée puis résolue par spsolve.
+Résultats — Des coupes 2D (maillage, carte de potentiel, lignes équipotentielles, profils V(x) et V(y)) et un profil V(z) qui sert à diagnostiquer si le phénomène est essentiellement 2D ou s'il faut bien la 3D complète.
+
 Le problème modélisé est celui d'un **capteur capacitif à électrodes coplanaires** :
 une ou deux électrodes sont posées sur la face supérieure d'un bloc isolant. On calcule
 la distribution du **potentiel électrique** φ et du **champ électrique** **E** à l'intérieur
